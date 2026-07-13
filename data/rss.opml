@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+	<head>
+		<title>RSS Daily Digest</title>
+	</head>
+	<body>
+		<outline title="阮一峰的网络日志" text="阮一峰的网络日志" type="rss" version="RSS" xmlUrl="http://www.ruanyifeng.com/blog/atom.xml" htmlUrl="http://www.ruanyifeng.com/blog/"/>
+		<outline title="The Clean Code Blog" text="The Clean Code Blog" type="rss" version="RSS" xmlUrl="http://blog.cleancoder.com/atom.xml" htmlUrl="http://blog.cleancoder.com/"/>
+		<outline title="Blogs" text="Blogs">
+			<outline title="simonwillison.net" text="simonwillison.net" type="rss" version="RSS" xmlUrl="https://simonwillison.net/atom/everything/" htmlUrl="http://simonwillison.net/"/>
+			<outline title="jeffgeerling.com" text="jeffgeerling.com" type="rss" version="RSS" xmlUrl="https://www.jeffgeerling.com/blog.xml" htmlUrl="https://www.jeffgeerling.com/"/>
+			<outline title="seangoedecke.com" text="seangoedecke.com" type="rss" version="RSS" xmlUrl="https://www.seangoedecke.com/rss.xml" htmlUrl="https://seangoedecke.com"/>
+			<outline title="krebsonsecurity.com" text="krebsonsecurity.com" type="rss" version="RSS" xmlUrl="https://krebsonsecurity.com/feed/" htmlUrl="https://krebsonsecurity.com"/>
+			<outline title="daringfireball.net" text="daringfireball.net" type="rss" version="RSS" xmlUrl="https://daringfireball.net/feeds/main" htmlUrl="https://daringfireball.net/"/>
+			<outline title="ericmigi.com" text="ericmigi.com" type="rss" version="RSS" xmlUrl="https://ericmigi.com/rss.xml" htmlUrl="http://github.com/dylang/node-rss"/>
+			<outline title="antirez.com" text="antirez.com" type="rss" version="RSS" xmlUrl="http://antirez.com/rss" htmlUrl="http://antirez.com"/>
+			<outline title="idiallo.com" text="idiallo.com" type="rss" version="RSS" xmlUrl="https://idiallo.com/feed.rss" htmlUrl="https://idiallo.com"/>
+			<outline title="maurycyz.com" text="maurycyz.com" type="rss" version="RSS" xmlUrl="https://maurycyz.com/index.xml" htmlUrl="https://maurycyz.com/"/>
+			<outline title="pluralistic.net" text="pluralistic.net" type="rss" version="RSS" xmlUrl="https://pluralistic.net/feed/" htmlUrl="https://pluralistic.net"/>
+			<outline title="shkspr.mobi" text="shkspr.mobi" type="rss" version="RSS" xmlUrl="https://shkspr.mobi/blog/feed/" htmlUrl="https://shkspr.mobi/blog"/>
+			<outline title="lcamtuf.substack.com" text="lcamtuf.substack.com" type="rss" version="RSS" xmlUrl="https://lcamtuf.substack.com/feed" htmlUrl="https://lcamtuf.substack.com"/>
+			<outline title="mitchellh.com" text="mitchellh.com" type="rss" version="RSS" xmlUrl="https://mitchellh.com/feed.xml" htmlUrl="https://mitchellh.com"/>
+			<outline title="dynomight.net" text="dynomight.net" type="rss" version="RSS" xmlUrl="https://dynomight.net/feed.xml" htmlUrl="https://dynomight.net/"/>
+			<outline title="utcc.utoronto.ca/~cks" text="utcc.utoronto.ca/~cks" type="rss" version="RSS" xmlUrl="https://utcc.utoronto.ca/~cks/space/blog/?atom" htmlUrl="https://utcc.utoronto.ca/~cks/space/blog/?atom"/>
+			<outline title="xeiaso.net" text="xeiaso.net" type="rss" version="RSS" xmlUrl="https://xeiaso.net/blog.rss" htmlUrl="https://xeiaso.net/"/>
+			<outline title="devblogs.microsoft.com/oldnewthing" text="devblogs.microsoft.com/oldnewthing" type="rss" version="RSS" xmlUrl="https://devblogs.microsoft.com/oldnewthing/feed" htmlUrl="https://devblogs.microsoft.com/oldnewthing"/>
+			<outline title="righto.com" text="righto.com" type="rss" version="RSS" xmlUrl="https://www.righto.com/feeds/posts/default" htmlUrl="http://www.righto.com/"/>
+			<outline title="lucumr.pocoo.org" text="lucumr.pocoo.org" type="rss" version="RSS" xmlUrl="https://lucumr.pocoo.org/feed.atom" htmlUrl="https://lucumr.pocoo.org/"/>
+			<outline title="skyfall.dev" text="skyfall.dev" type="rss" version="RSS" xmlUrl="https://skyfall.dev/rss.xml" htmlUrl="https://mahadk.com/"/>
+			<outline title="garymarcus.substack.com" text="garymarcus.substack.com" type="rss" version="RSS" xmlUrl="https://garymarcus.substack.com/feed" htmlUrl="https://garymarcus.substack.com"/>
+			<outline title="rachelbythebay.com" text="rachelbythebay.com" type="rss" version="RSS" xmlUrl="https://rachelbythebay.com/w/atom.xml" htmlUrl="https://rachelbythebay.com/w/atom.xml"/>
+			<outline title="overreacted.io" text="overreacted.io" type="rss" version="RSS" xmlUrl="https://overreacted.io/rss.xml" htmlUrl="https://overreacted.io/"/>
+			<outline title="timsh.org" text="timsh.org" type="rss" version="RSS" xmlUrl="https://timsh.org/rss/" htmlUrl="https://timsh.org/"/>
+			<outline title="johndcook.com" text="johndcook.com" type="rss" version="RSS" xmlUrl="https://www.johndcook.com/blog/feed/" htmlUrl="https://www.johndcook.com/blog"/>
+			<outline title="gilesthomas.com" text="gilesthomas.com" type="rss" version="RSS" xmlUrl="https://gilesthomas.com/feed/rss.xml" htmlUrl="https://www.gilesthomas.com/"/>
+			<outline title="matklad.github.io" text="matklad.github.io" type="rss" version="RSS" xmlUrl="https://matklad.github.io/feed.xml" htmlUrl="https://matklad.github.io"/>
+			<outline title="derekthompson.org" text="derekthompson.org" type="rss" version="RSS" xmlUrl="https://www.theatlantic.com/feed/author/derek-thompson/" htmlUrl="https://www.theatlantic.com/author/derek-thompson/"/>
+			<outline title="evanhahn.com" text="evanhahn.com" type="rss" version="RSS" xmlUrl="https://evanhahn.com/feed.xml" htmlUrl="https://evanhahn.com/blog/"/>
+			<outline title="terriblesoftware.org" text="terriblesoftware.org" type="rss" version="RSS" xmlUrl="https://terriblesoftware.org/feed/" htmlUrl="https://terriblesoftware.org"/>
+			<outline title="rakhim.exotext.com" text="rakhim.exotext.com" type="rss" version="RSS" xmlUrl="https://rakhim.exotext.com/rss.xml" htmlUrl="https://rakhim.exotext.com"/>
+			<outline title="joanwestenberg.com" text="joanwestenberg.com" type="rss" version="RSS" xmlUrl="https://joanwestenberg.com/rss" htmlUrl="https://www.joanwestenberg.com/"/>
+			<outline title="xania.org" text="xania.org" type="rss" version="RSS" xmlUrl="https://xania.org/feed" htmlUrl="http://xania.org/?utm_source=feed&amp;utm_medium=rss"/>
+			<outline title="micahflee.com" text="micahflee.com" type="rss" version="RSS" xmlUrl="https://micahflee.com/feed/" htmlUrl="https://micahflee.com/"/>
+			<outline title="nesbitt.io" text="nesbitt.io" type="rss" version="RSS" xmlUrl="https://nesbitt.io/feed.xml" htmlUrl="https://nesbitt.io/"/>
+			<outline title="construction-physics.com" text="construction-physics.com" type="rss" version="RSS" xmlUrl="https://www.construction-physics.com/feed" htmlUrl="https://www.construction-physics.com"/>
+			<outline title="tedium.co" text="tedium.co" type="rss" version="RSS" xmlUrl="https://feed.tedium.co/" htmlUrl="https://tedium.co"/>
+			<outline title="susam.net" text="susam.net" type="rss" version="RSS" xmlUrl="https://susam.net/feed.xml" htmlUrl="https://susam.net/"/>
+			<outline title="entropicthoughts.com" text="entropicthoughts.com" type="rss" version="RSS" xmlUrl="https://entropicthoughts.com/feed.xml" htmlUrl="https://entropicthoughts.com/"/>
+			<outline title="buttondown.com/hillelwayne" text="buttondown.com/hillelwayne" type="rss" version="RSS" xmlUrl="https://buttondown.com/hillelwayne/rss" htmlUrl="https://buttondown.com/hillelwayne"/>
+			<outline title="dwarkesh.com" text="dwarkesh.com" type="rss" version="RSS" xmlUrl="https://www.dwarkeshpatel.com/feed" htmlUrl="https://www.dwarkesh.com"/>
+			<outline title="borretti.me" text="borretti.me" type="rss" version="RSS" xmlUrl="https://borretti.me/feed.xml" htmlUrl="https://borretti.me/"/>
+			<outline title="wheresyoured.at" text="wheresyoured.at" type="rss" version="RSS" xmlUrl="https://www.wheresyoured.at/rss/" htmlUrl="https://www.wheresyoured.at/"/>
+			<outline title="jayd.ml" text="jayd.ml" type="rss" version="RSS" xmlUrl="https://jayd.ml/feed.xml" htmlUrl="https://jayd.ml/"/>
+			<outline title="minimaxir.com" text="minimaxir.com" type="rss" version="RSS" xmlUrl="https://minimaxir.com/index.xml" htmlUrl="https://minimaxir.com/"/>
+			<outline title="geohot.github.io" text="geohot.github.io" type="rss" version="RSS" xmlUrl="https://geohot.github.io/blog/feed.xml" htmlUrl="https://geohot.github.io//blog/"/>
+			<outline title="paulgraham.com" text="paulgraham.com" type="rss" version="RSS" xmlUrl="http://www.aaronsw.com/2002/feeds/pgessays.rss" htmlUrl="http://www.paulgraham.com/"/>
+			<outline title="filfre.net" text="filfre.net" type="rss" version="RSS" xmlUrl="https://www.filfre.net/feed/" htmlUrl="https://www.filfre.net"/>
+			<outline title="blog.jim-nielsen.com" text="blog.jim-nielsen.com" type="rss" version="RSS" xmlUrl="https://blog.jim-nielsen.com/feed.xml" htmlUrl="https://blog.jim-nielsen.com"/>
+			<outline title="dfarq.homeip.net" text="dfarq.homeip.net" type="rss" version="RSS" xmlUrl="https://dfarq.homeip.net/feed/" htmlUrl="https://dfarq.homeip.net/"/>
+			<outline title="jyn.dev" text="jyn.dev" type="rss" version="RSS" xmlUrl="https://jyn.dev/atom.xml" htmlUrl="https://jyn.dev"/>
+			<outline title="geoffreylitt.com" text="geoffreylitt.com" type="rss" version="RSS" xmlUrl="https://www.geoffreylitt.com/feed.xml" htmlUrl="https://geoffreylitt.com"/>
+			<outline title="downtowndougbrown.com" text="downtowndougbrown.com" type="rss" version="RSS" xmlUrl="https://www.downtowndougbrown.com/feed/" htmlUrl="https://www.downtowndougbrown.com"/>
+			<outline title="brutecat.com" text="brutecat.com" type="rss" version="RSS" xmlUrl="https://brutecat.com/rss.xml" htmlUrl="https://brutecat.com"/>
+			<outline title="eli.thegreenplace.net" text="eli.thegreenplace.net" type="rss" version="RSS" xmlUrl="https://eli.thegreenplace.net/feeds/all.atom.xml" htmlUrl="https://eli.thegreenplace.net/"/>
+			<outline title="abortretry.fail" text="abortretry.fail" type="rss" version="RSS" xmlUrl="https://www.abortretry.fail/feed" htmlUrl="https://www.abortretry.fail"/>
+			<outline title="fabiensanglard.net" text="fabiensanglard.net" type="rss" version="RSS" xmlUrl="https://fabiensanglard.net/rss.xml" htmlUrl="https://fabiensanglard.net"/>
+			<outline title="oldvcr.blogspot.com" text="oldvcr.blogspot.com" type="rss" version="RSS" xmlUrl="https://oldvcr.blogspot.com/feeds/posts/default" htmlUrl="https://oldvcr.blogspot.com/"/>
+			<outline title="bogdanthegeek.github.io" text="bogdanthegeek.github.io" type="rss" version="RSS" xmlUrl="https://bogdanthegeek.github.io/blog/index.xml" htmlUrl="https://bogdanthegeek.github.io/blog/"/>
+			<outline title="hugotunius.se" text="hugotunius.se" type="rss" version="RSS" xmlUrl="https://hugotunius.se/feed.xml" htmlUrl="https://hugotunius.se/"/>
+			<outline title="gwern.net" text="gwern.net" type="rss" version="RSS" xmlUrl="https://gwern.substack.com/feed" htmlUrl="https://gwern.substack.com"/>
+			<outline title="berthub.eu" text="berthub.eu" type="rss" version="RSS" xmlUrl="https://berthub.eu/articles/index.xml" htmlUrl="https://berthub.eu/articles/"/>
+			<outline title="chadnauseam.com" text="chadnauseam.com" type="rss" version="RSS" xmlUrl="https://chadnauseam.com/rss.xml" htmlUrl="https://chadnauseam.com/"/>
+			<outline title="simone.org" text="simone.org" type="rss" version="RSS" xmlUrl="https://simone.org/feed/" htmlUrl="https://simone.org/"/>
+			<outline title="it-notes.dragas.net" text="it-notes.dragas.net" type="rss" version="RSS" xmlUrl="https://it-notes.dragas.net/feed/" htmlUrl="https://it-notes.dragas.net"/>
+			<outline title="beej.us" text="beej.us" type="rss" version="RSS" xmlUrl="https://beej.us/blog/rss.xml" htmlUrl="http://beej.us/blog/"/>
+			<outline title="hey.paris" text="hey.paris" type="rss" version="RSS" xmlUrl="https://hey.paris/index.xml" htmlUrl="https://hey.paris/"/>
+			<outline title="danielwirtz.com" text="danielwirtz.com" type="rss" version="RSS" xmlUrl="https://danielwirtz.com/rss.xml" htmlUrl="https://danielwirtz.com/blog"/>
+			<outline title="matduggan.com" text="matduggan.com" type="rss" version="RSS" xmlUrl="https://matduggan.com/rss/" htmlUrl="https://matduggan.com/"/>
+			<outline title="refactoringenglish.com" text="refactoringenglish.com" type="rss" version="RSS" xmlUrl="https://refactoringenglish.com/index.xml" htmlUrl="https://refactoringenglish.com/"/>
+			<outline title="worksonmymachine.substack.com" text="worksonmymachine.substack.com" type="rss" version="RSS" xmlUrl="https://worksonmymachine.substack.com/feed" htmlUrl="https://worksonmymachine.ai"/>
+			<outline title="philiplaine.com" text="philiplaine.com" type="rss" version="RSS" xmlUrl="https://philiplaine.com/index.xml" htmlUrl="https://philiplaine.com/"/>
+			<outline title="steveblank.com" text="steveblank.com" type="rss" version="RSS" xmlUrl="https://steveblank.com/feed/" htmlUrl="https://steveblank.com"/>
+			<outline title="bernsteinbear.com" text="bernsteinbear.com" type="rss" version="RSS" xmlUrl="https://bernsteinbear.com/feed.xml" htmlUrl="https://bernsteinbear.com"/>
+			<outline title="danieldelaney.net" text="danieldelaney.net" type="rss" version="RSS" xmlUrl="https://danieldelaney.net/feed" htmlUrl="http://danieldelaney.net/"/>
+			<outline title="troyhunt.com" text="troyhunt.com" type="rss" version="RSS" xmlUrl="https://www.troyhunt.com/rss/" htmlUrl="https://www.troyhunt.com/"/>
+			<outline title="herman.bearblog.dev" text="herman.bearblog.dev" type="rss" version="RSS" xmlUrl="https://herman.bearblog.dev/feed/" htmlUrl="https://herman.bearblog.dev/"/>
+			<outline title="tomrenner.com" text="tomrenner.com" type="rss" version="RSS" xmlUrl="https://tomrenner.com/index.xml" htmlUrl="https://tomrenner.com/"/>
+			<outline title="blog.pixelmelt.dev" text="blog.pixelmelt.dev" type="rss" version="RSS" xmlUrl="https://blog.pixelmelt.dev/rss/" htmlUrl="https://blog.pixelmelt.dev/"/>
+			<outline title="martinalderson.com" text="martinalderson.com" type="rss" version="RSS" xmlUrl="https://martinalderson.com/feed.xml" htmlUrl="https://martinalderson.com/"/>
+			<outline title="danielchasehooper.com" text="danielchasehooper.com" type="rss" version="RSS" xmlUrl="https://danielchasehooper.com/feed.xml" htmlUrl="https://danielchasehooper.com/feed.xml"/>
+			<outline title="chiark.greenend.org.uk/~sgtatham" text="chiark.greenend.org.uk/~sgtatham" type="rss" version="RSS" xmlUrl="https://www.chiark.greenend.org.uk/~sgtatham/quasiblog/feed.xml" htmlUrl="https://www.chiark.greenend.org.uk/~sgtatham/quasiblog/"/>
+			<outline title="grantslatton.com" text="grantslatton.com" type="rss" version="RSS" xmlUrl="https://grantslatton.com/rss.xml" htmlUrl="https://grantslatton.com/"/>
+			<outline title="experimental-history.com" text="experimental-history.com" type="rss" version="RSS" xmlUrl="https://www.experimental-history.com/feed" htmlUrl="https://www.experimental-history.com"/>
+			<outline title="anildash.com" text="anildash.com" type="rss" version="RSS" xmlUrl="https://anildash.com/feed.xml" htmlUrl="https://anildash.com/"/>
+			<outline title="aresluna.org" text="aresluna.org" type="rss" version="RSS" xmlUrl="https://aresluna.org/main.rss" htmlUrl="https://www.aresluna.org/"/>
+			<outline title="michael.stapelberg.ch" text="michael.stapelberg.ch" type="rss" version="RSS" xmlUrl="https://michael.stapelberg.ch/feed.xml" htmlUrl="https://michael.stapelberg.ch/"/>
+			<outline title="miguelgrinberg.com" text="miguelgrinberg.com" type="rss" version="RSS" xmlUrl="https://blog.miguelgrinberg.com/feed" htmlUrl="https://blog.miguelgrinberg.com/feed"/>
+			<outline title="keygen.sh" text="keygen.sh" type="rss" version="RSS" xmlUrl="https://keygen.sh/blog/feed.xml" htmlUrl="https://keygen.sh/blog/"/>
+			<outline title="computer.rip" text="computer.rip" type="rss" version="RSS" xmlUrl="https://computer.rip/rss.xml" htmlUrl="https://computer.rip"/>
+		</outline>
+	</body>
+</opml>

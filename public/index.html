@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSS 每日摘要</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body x-data="app()" x-init="init()" @keydown.escape.window="tab === 'settings' && (tab = 'digests')">
+  <header class="topbar">
+    <h1>📰 RSS 每日摘要</h1>
+  </header>
+
+  <main x-show="toast" class="toast" :class="toastType" x-text="toast" @click="toast = ''"></main>
+
+  <!-- ========== 每日摘要（始终显示） ========== -->
+  <section class="tab-panel">
+    <div class="split">
+      <aside class="list">
+        <template x-if="digests.length === 0">
+          <p class="empty">暂无摘要，点击左下角设置 → “手工立即生成摘要”。</p>
+        </template>
+        <template x-for="d in digests" :key="d.id">
+          <div class="list-item" :class="{ active: current && current.id === d.id }" @click="openDigest(d.id)">
+            <div class="li-title" x-text="fmtDate(d.generatedAt)"></div>
+            <div class="li-meta">
+              <span x-text="`源 ${d.feedCount}`"></span>
+              <span x-text="`文章 ${d.totalArticles}`"></span>
+              <span x-show="d.failedFeeds" class="warn" x-text="`失败 ${d.failedFeeds}`"></span>
+            </div>
+            <button class="link-danger" x-show="status.settingsUnlocked" @click.stop="removeDigest(d.id)">删除</button>
+          </div>
+        </template>
+      </aside>
+
+      <article class="detail">
+        <template x-if="!current">
+          <p class="empty">从左侧选择一份摘要查看详情。</p>
+        </template>
+        <template x-if="current">
+          <div>
+            <h2 x-text="'📰 ' + fmtDate(current.generatedAt)"></h2>
+            <div class="digest-html" x-html="current.bodyHtml"></div>
+          </div>
+        </template>
+      </article>
+    </div>
+  </section>
+
+  <!-- ========== 设置（弹窗） ========== -->
+  <div class="modal-overlay" x-show="tab === 'settings' && status.settingsUnlocked"
+       x-transition.opacity @click.self="tab = 'digests'" style="display:none">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>⚙️ 设置</h2>
+        <button class="modal-close" @click="tab = 'digests'" title="关闭">✕</button>
+      </div>
+      <div class="settings-layout">
+      <aside class="settings-menu">
+        <button :class="{ active: settingsTab === 'generate' }" @click="settingsTab = 'generate'">
+          <span class="menu-icon">⚡</span> 手工立即生成摘要
+        </button>
+        <button :class="{ active: settingsTab === 'feeds' }" @click="settingsTab = 'feeds'; loadFeeds()">
+          <span class="menu-icon">📡</span> RSS 源管理
+        </button>
+        <button :class="{ active: settingsTab === 'schedules' }" @click="settingsTab = 'schedules'; loadSchedules()">
+          <span class="menu-icon">⏰</span> 定时调度
+        </button>
+      </aside>
+
+      <div class="settings-content">
+
+    <!-- 手工立即生成摘要 -->
+    <div x-show="settingsTab === 'generate'">
+      <h3>手工立即生成摘要</h3>
+      <div class="form-card">
+        <label>时间范围（小时）
+          <input type="number" min="1" x-model.number="genHours">
+        </label>
+        <label><input type="checkbox" x-model="genEmail"> 同时发邮件</label>
+        <div class="form-actions">
+          <button class="primary" @click="generate()" :disabled="generating"
+                  x-text="generating ? '生成中…' : '立即生成摘要'"></button>
+        </div>
+        <p class="muted">生成后可在“每日摘要”页查看结果。</p>
+      </div>
+    </div>
+
+    <!-- RSS 源管理 -->
+    <div x-show="settingsTab === 'feeds'">
+    <div class="toolbar">
+      <button class="primary" @click="openFeedForm()">+ 新增源</button>
+      <span class="muted" x-text="`共 ${feeds.length} 个源`"></span>
+    </div>
+
+    <div x-show="feedForm.show" class="form-card">
+      <h3 x-text="feedForm.id ? '编辑源' : '新增源'"></h3>
+      <label>标题 <input type="text" x-model="feedForm.title" placeholder="站点名称"></label>
+      <label>RSS 地址 <input type="text" x-model="feedForm.xmlUrl" placeholder="https://example.com/feed.xml"></label>
+      <label>站点主页 <input type="text" x-model="feedForm.htmlUrl" placeholder="https://example.com"></label>
+      <label>分组 <input type="text" x-model="feedForm.category" placeholder="可选，如 Blogs"></label>
+      <div class="form-actions">
+        <button class="primary" @click="saveFeed()">保存</button>
+        <button @click="feedForm.show = false">取消</button>
+      </div>
+    </div>
+
+    <div class="grid-wrap">
+    <table class="grid">
+      <thead><tr><th>标题</th><th>分组</th><th>RSS 地址</th><th>操作</th></tr></thead>
+      <tbody>
+        <template x-for="f in feeds" :key="f.id">
+          <tr>
+            <td x-text="f.title"></td>
+            <td x-text="f.category || '-'"></td>
+            <td class="url"><a :href="f.xmlUrl" target="_blank" rel="noopener" x-text="f.xmlUrl"></a></td>
+            <td class="ops">
+              <button @click="openFeedForm(f)">编辑</button>
+              <button class="link-danger" @click="removeFeed(f)">删除</button>
+            </td>
+          </tr>
+        </template>
+      </tbody>
+    </table>
+    </div>
+    </div>
+
+    <!-- 定时调度 -->
+    <div x-show="settingsTab === 'schedules'">
+    <div class="toolbar">
+      <button class="primary" @click="openScheduleForm()">+ 新增任务</button>
+      <span class="muted">cron 格式：分 时 日 月 周（如 <code>0 8 * * *</code> 表示每天 8:00）</span>
+    </div>
+
+    <div x-show="scheduleForm.show" class="form-card">
+      <h3 x-text="scheduleForm.id ? '编辑任务' : '新增任务'"></h3>
+      <label>任务名称 <input type="text" x-model="scheduleForm.name" placeholder="每日早报"></label>
+      <label>cron 表达式 <input type="text" x-model="scheduleForm.cron" placeholder="0 8 * * *"></label>
+      <label>时间范围（小时） <input type="number" min="1" x-model.number="scheduleForm.hours"></label>
+      <label><input type="checkbox" x-model="scheduleForm.sendEmail"> 发送邮件</label>
+      <label><input type="checkbox" x-model="scheduleForm.enabled"> 启用</label>
+      <div class="form-actions">
+        <button class="primary" @click="saveSchedule()">保存</button>
+        <button @click="scheduleForm.show = false">取消</button>
+      </div>
+    </div>
+
+    <div class="grid-wrap">
+    <table class="grid">
+      <thead><tr><th>名称</th><th>cron</th><th>范围</th><th>邮件</th><th>状态</th><th>上次运行</th><th>操作</th></tr></thead>
+      <tbody>
+        <template x-for="s in schedules" :key="s.id">
+          <tr>
+            <td x-text="s.name"></td>
+            <td><code x-text="s.cron"></code></td>
+            <td x-text="s.hours + 'h'"></td>
+            <td x-text="s.sendEmail ? '是' : '否'"></td>
+            <td><span :class="s.enabled ? 'badge on' : 'badge off'" x-text="s.enabled ? '启用' : '停用'"></span></td>
+            <td x-html="lastRunText(s.lastRun)"></td>
+            <td class="ops">
+              <button @click="runSchedule(s)">立即运行</button>
+              <button @click="openScheduleForm(s)">编辑</button>
+              <button class="link-danger" @click="removeSchedule(s)">删除</button>
+            </td>
+          </tr>
+        </template>
+      </tbody>
+    </table>
+    </div>
+    </div>
+
+      </div><!-- /.settings-content -->
+      </div><!-- /.settings-layout -->
+    </div><!-- /.modal -->
+  </div><!-- /.modal-overlay -->
+
+  <!-- 左下角浮动设置按钮（仅在设置解锁时显示） -->
+  <button class="fab" x-show="status.settingsUnlocked" @click="toggleSettings()"
+          :title="tab === 'settings' ? '返回摘要' : '设置'"
+          x-text="tab === 'settings' ? '✕' : '⚙️'"></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js" defer></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
