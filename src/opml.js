@@ -30,7 +30,8 @@ async function listFeeds() {
           title: attr.title || attr.text || attr.xmlUrl,
           xmlUrl: attr.xmlUrl,
           htmlUrl: attr.htmlUrl || '',
-          category: category || ''
+          category: category || '',
+          description: attr.description || ''
         });
       } else if (outline.outline) {
         // 无 xmlUrl 的 outline 视为分组
@@ -61,7 +62,8 @@ async function saveFeeds(feeds) {
       type: 'rss',
       version: 'RSS',
       xmlUrl: f.xmlUrl,
-      htmlUrl: f.htmlUrl || ''
+      htmlUrl: f.htmlUrl || '',
+      description: f.description || ''
     }
   });
 
@@ -105,7 +107,8 @@ async function addFeed(feed) {
     title: feed.title || feed.xmlUrl,
     xmlUrl: feed.xmlUrl,
     htmlUrl: feed.htmlUrl || '',
-    category: feed.category || ''
+    category: feed.category || '',
+    description: feed.description || ''
   });
   await saveFeeds(feeds);
   return feeds.find((f) => f.id === id);
@@ -125,7 +128,8 @@ async function updateFeed(id, patch) {
     title: patch.title != null ? patch.title : current.title,
     xmlUrl: patch.xmlUrl != null ? patch.xmlUrl : current.xmlUrl,
     htmlUrl: patch.htmlUrl != null ? patch.htmlUrl : current.htmlUrl,
-    category: patch.category != null ? patch.category : current.category
+    category: patch.category != null ? patch.category : current.category,
+    description: patch.description != null ? patch.description : current.description
   };
   // xmlUrl 变了 id 也要变
   updated.id = feedId(updated.xmlUrl);

@@ -33,7 +33,7 @@ function app() {
 
     // 源
     feeds: [],
-    feedForm: { show: false, id: null, title: '', xmlUrl: '', htmlUrl: '', category: '' },
+    feedForm: { show: false, id: null, title: '', xmlUrl: '', htmlUrl: '', category: '', description: '' },
 
     // 调度
     schedules: [],
@@ -135,8 +135,8 @@ function app() {
     },
     openFeedForm(f) {
       this.feedForm = f
-        ? { show: true, id: f.id, title: f.title, xmlUrl: f.xmlUrl, htmlUrl: f.htmlUrl, category: f.category }
-        : { show: true, id: null, title: '', xmlUrl: '', htmlUrl: '', category: '' };
+        ? { show: true, id: f.id, title: f.title, xmlUrl: f.xmlUrl, htmlUrl: f.htmlUrl, category: f.category, description: f.description || '' }
+        : { show: true, id: null, title: '', xmlUrl: '', htmlUrl: '', category: '', description: '' };
     },
     async saveFeed() {
       const f = this.feedForm;

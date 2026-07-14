@@ -47,8 +47,8 @@ body {
   padding: 24px;
 }
 .modal {
-  background: #fff; border-radius: 10px; width: 100%; max-width: 960px;
-  max-height: 88vh; display: flex; flex-direction: column; overflow: hidden;
+  background: #fff; border-radius: 10px; width: 100%; max-width: 1480px;
+  height: 94vh; display: flex; flex-direction: column; overflow: hidden;
   box-shadow: 0 12px 40px rgba(0,0,0,.28);
 }
 .modal-header {
@@ -63,7 +63,7 @@ body {
 .modal-close:hover { background: #e74c3c; color: #fff; }
 
 /* 设置：左侧菜单 + 右侧内容 */
-.settings-layout { display: flex; gap: 24px; align-items: flex-start; padding: 24px; overflow-y: auto; }
+.settings-layout { display: flex; gap: 24px; align-items: stretch; padding: 24px; flex: 1; min-height: 0; }
 .settings-menu { flex: 0 0 200px; display: flex; flex-direction: column; gap: 4px; }
 .settings-menu button {
   border: none; background: transparent; color: #34495e; text-align: left;
@@ -73,12 +73,13 @@ body {
 .settings-menu button:hover { background: #eef2f5; }
 .settings-menu button.active { background: #3498db; color: #fff; font-weight: 600; }
 .settings-menu .menu-icon { font-size: 16px; }
-.settings-content { flex: 1; min-width: 0; }
+.settings-content { flex: 1; min-width: 0; min-height: 0; overflow-y: auto; padding-right: 4px; }
 .settings-content h3 { margin-top: 0; }
 
 @media (max-width: 768px) {
+  .modal { height: 90vh; }
   .settings-layout { flex-direction: column; }
-  .settings-menu { flex: 1 1 auto; width: 100%; flex-direction: row; flex-wrap: wrap; }
+  .settings-menu { flex: 0 0 auto; width: 100%; flex-direction: row; flex-wrap: wrap; }
 }
 
 /* 工具栏 */
@@ -137,13 +138,15 @@ input[type=text]:focus, input[type=number]:focus {
 .grid th { background: #f8fafb; color: var(--ink-soft); font-weight: 600; white-space: nowrap; }
 .grid td.url { max-width: clamp(160px, 24vw, 340px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .grid td.url a { color: var(--primary); text-decoration: none; }
+.grid td.description { max-width: clamp(200px, 28vw, 400px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #5a6c7d; }
 .ops { white-space: nowrap; display: flex; gap: 6px; flex-wrap: wrap; }
 
 /* 表单卡片 */
 .form-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; margin-bottom: 18px; box-shadow: var(--shadow-sm); max-width: 560px; width: 100%; }
 .form-card h3 { margin-top: 0; }
 .form-card label { display: block; margin-bottom: 12px; }
-.form-card label input[type=text], .form-card label input[type=number] { display: block; width: 100%; margin-top: 4px; }
+.form-card label input[type=text], .form-card label input[type=number], .form-card label textarea { display: block; width: 100%; margin-top: 4px; }
+.form-card label textarea { font-family: inherit; resize: vertical; }
 .form-card label input[type=checkbox] { margin-right: 6px; }
 .form-actions { display: flex; gap: 10px; }
 

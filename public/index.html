@@ -99,6 +99,7 @@
       <label>RSS 地址 <input type="text" x-model="feedForm.xmlUrl" placeholder="https://example.com/feed.xml"></label>
       <label>站点主页 <input type="text" x-model="feedForm.htmlUrl" placeholder="https://example.com"></label>
       <label>分组 <input type="text" x-model="feedForm.category" placeholder="可选，如 Blogs"></label>
+      <label>描述说明 <textarea x-model="feedForm.description" placeholder="可选，对该源的介绍说明" rows="3"></textarea></label>
       <div class="form-actions">
         <button class="primary" @click="saveFeed()">保存</button>
         <button @click="feedForm.show = false">取消</button>
@@ -107,12 +108,13 @@
 
     <div class="grid-wrap">
     <table class="grid">
-      <thead><tr><th>标题</th><th>分组</th><th>RSS 地址</th><th>操作</th></tr></thead>
+      <thead><tr><th>标题</th><th>分组</th><th>描述说明</th><th>RSS 地址</th><th>操作</th></tr></thead>
       <tbody>
         <template x-for="f in feeds" :key="f.id">
           <tr>
             <td x-text="f.title"></td>
             <td x-text="f.category || '-'"></td>
+            <td class="description" x-text="f.description || '-'"></td>
             <td class="url"><a :href="f.xmlUrl" target="_blank" rel="noopener" x-text="f.xmlUrl"></a></td>
             <td class="ops">
               <button @click="openFeedForm(f)">编辑</button>
