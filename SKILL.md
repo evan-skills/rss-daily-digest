@@ -12,7 +12,7 @@ trigger: 当用户想要查看 RSS 摘要、管理订阅源、配置定时抓取
 
 ```bash
 npm install       # 首次运行
-npm start         # 启动 Web 服务，打开 http://127.0.0.1:3000
+npm start         # 启动 Web 服务，打开 http://127.0.0.1:3002
 ```
 
 Web 界面提供三个功能：

@@ -12,7 +12,7 @@ module.exports = {
   SCHEDULES_PATH: path.join(DATA_DIR, 'schedules.json'),
 
   // Web 服务
-  PORT: parseInt(process.env.PORT, 10) || 3000,
+  PORT: parseInt(process.env.PORT, 10) || 3002,
   HOST: process.env.HOST || '127.0.0.1',
 
   // 设置访问令牌（为空则设置不加保护，所有人可访问）

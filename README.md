@@ -26,7 +26,7 @@ Node.js + Express + 原生前端（Alpine.js），文件存储（OPML + JSON）�
 ```bash
 npm install
 cp .env.example .env      # 按需填写，全部可选
-npm start                 # 打开 http://127.0.0.1:3000
+npm start                 # 打开 http://127.0.0.1:3002
 ```
 
 ## 配置
@@ -35,7 +35,7 @@ npm start                 # 打开 http://127.0.0.1:3000
 
 ```env
 # ---- Web 服务 ----
-PORT=3000
+PORT=3002
 HOST=127.0.0.1            # 默认仅本机访问
 
 # ---- 设置访问令牌（可选）----
@@ -78,7 +78,7 @@ EMAIL_TO=recipient@example.com
 
 设置相关功能（源管理、调度、手工生成、删除）可用令牌保护：
 
-- 在 `.env` 配置 `SETTINGS_TOKEN` 后，需通过 `http://localhost:3000/?token=你的令牌` 访问，令牌正确才显示 ⚙️ 与设置内容。
+- 在 `.env` 配置 `SETTINGS_TOKEN` 后，需通过 `http://localhost:3002/?token=你的令牌` 访问，令牌正确才显示 ⚙️ 与设置内容。
 - 无令牌或令牌错误时，设置不可见，相关写接口返回 `401`（查看摘要仍然公开）。
 - 留空则不加保护（任何人可访问，仅建议纯本机使用）。
 - 生成随机令牌：
