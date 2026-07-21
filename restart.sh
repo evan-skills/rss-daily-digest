@@ -22,6 +22,6 @@ fi
 
 # 4. 后台启动（关闭 shell 后不停）
 mkdir -p logs
-nohup node server.js >> logs/rss-daily-digest.log 2>&1 &
+nohup npm start >> logs/rss-daily-digest.log 2>&1 &
 
 echo "已重启，PID=$!  日志: tail -f logs/rss-daily-digest.log"
