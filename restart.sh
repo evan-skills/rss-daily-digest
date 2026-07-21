@@ -4,8 +4,7 @@ set -e
 cd "$(dirname "$0")"
 
 # 1. 拉取最新代码
-git fetch origin main
-git reset --hard origin/main
+git pull origin main
 
 # 2. 安装依赖
 npm install
